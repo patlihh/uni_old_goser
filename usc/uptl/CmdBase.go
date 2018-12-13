@@ -1,0 +1,22 @@
+// CmdBase
+package uptl
+
+import ()
+
+const (
+	SERVER_TYPE  = 0x20
+	DEV_CMD_TYPE = 0x10
+	PC_CMD_TYPE  = 0x30
+	APP_CMD_TYPE = 0x40
+
+	CMD_10 = 0x10
+
+	CMD_SET_FAIL    = 0x00
+	CMD_SET_SUCCESS = 0x01
+
+	CMD_INVAILD_IMEI       = 0x02
+	CMD_INVAILD_BRAND      = 0x03
+	CMD_INVAILD_PHONE_TYPE = 0x04
+
+	MAX_IMEI_LEN = 16
+)

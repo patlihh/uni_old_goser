@@ -1,0 +1,30 @@
+#!/usr/bin/env bash	 
+
+if [ ! -f install_p_wechat ]; then
+#<span style="width: auto; height: auto; float: none;" id="16_nwp">
+#<a style="text-decoration: none;" mpid="16" target="_blank" href="http://cpro.baidu.com/cpro/ui/uijs.php?#adclass=0&app_id=0&c=news&cf=1001&ch=0&di=128&fv=11&is_app=0&jk=493851df63bdd83c&k=echo&k0=echo&kdi0=0&luki=8&n=10&p=baidu&q=74042097_cpr&rb=0&rs=1&seller_id=1&sid=3cd8bd63df513849&ssp2=1&stid=0&t=tpclicked3_hc&tu=u1989498&u=http####%3A%2F%2Fblog%2Estudygolang%2Ecom%2F2012%2F12%2Fgo%25E9%25A1%25B9%25E7%259B%25AE%25E7%259A%2584%25E7%259B%25AE%25E5%25BD%2595%25E7%#25BB%2593%25E6%259E%2584%2F&urlid=0" id="16_nwl">
+#<span style="color:#0000ff;font-size:13.9167px;width:auto;height:auto;float:none;">
+#echo</span></a></span> 'install must be run within its container folder' 1>&2
+echo 'install must be run within its container folder' 1>&2
+exit 1
+fi
+
+CURDIR=`pwd`
+OLDGOPATH="$GOPATH"
+export GOPATH="$CURDIR"
+
+gofmt -w src
+	 
+#go install socket_c	
+#go install socket_s
+
+go install park_wechat/unet
+go install park_wechat/uwechat
+go install park_wechat/umisc
+go install park_wechat/uptl
+go install park_wechat/usql
+go install park_wechat/ulog
+
+#export GOPATH="$OLDGOPATH"	 
+
+echo 'finished'
